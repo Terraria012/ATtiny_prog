@@ -1,0 +1,2103 @@
+#include "SimpleYMF825.h"
+#include <Arduino.h>
+
+SimpleYMF825 YMF825;
+
+uint8_t channel = 0;
+uint8_t channel1 = 1;
+uint8_t ch = 2;
+uint8_t c = 3;
+int x = 220;
+// int y = 150;
+
+void setup()
+{
+    YMF825.begin(IOVDD_5V);     // for 5V McU
+
+    //YMF825.begin(IOVdd_3V3); // for 3.3V McU
+    YMF825.setTone( 0, 3 );
+    YMF825.setTone( 1, 1 );
+    YMF825.setTone( 2, 1 );
+    YMF825.setTone( 3, 1 );
+    
+    YMF825.setMasterVolume(32);
+    
+    for(int ch=0;ch<4;ch++){
+        YMF825.setVolume(ch, 20);
+    }               
+}
+
+void loop()
+{
+YMF825.keyon(channel, 0x36);
+YMF825.keyon(ch, 0x41);
+delay(x);
+YMF825.keyoff(ch);
+YMF825.keyon(ch, 0x44);
+delay(x);
+YMF825.keyoff(ch);
+YMF825.keyon(ch, 0x41);
+delay(x);
+YMF825.keyoff(ch);
+YMF825.keyon(ch, 0x44);
+delay(x);
+YMF825.keyoff(ch);
+YMF825.keyoff(channel);
+
+YMF825.keyon(channel, 0x39);
+YMF825.keyon(ch, 0x42);
+delay(x);
+YMF825.keyoff(ch);
+YMF825.keyon(ch, 0x45);
+delay(x);
+YMF825.keyoff(ch);
+YMF825.keyon(ch, 0x42);
+delay(x);
+YMF825.keyoff(ch);
+YMF825.keyon(ch, 0x45);
+delay(x);
+YMF825.keyoff(ch);
+YMF825.keyoff(channel);
+
+YMF825.keyon(channel, 0x3A);
+YMF825.keyon(ch, 0x43);
+delay(x);
+YMF825.keyoff(ch);
+YMF825.keyon(ch, 0x46);
+delay(x);
+YMF825.keyoff(ch);
+YMF825.keyon(ch, 0x43);
+delay(x);
+YMF825.keyoff(ch);
+YMF825.keyon(ch, 0x46);
+delay(x);
+YMF825.keyoff(ch);
+YMF825.keyoff(channel);
+
+YMF825.keyon(channel, 0x3B);
+YMF825.keyon(ch, 0x45);
+delay(x);
+YMF825.keyoff(ch);
+YMF825.keyon(ch, 0x44);
+delay(x);
+YMF825.keyoff(ch);
+YMF825.keyon(ch, 0x43);
+delay(x);
+YMF825.keyoff(ch);
+YMF825.keyon(ch, 0x42);
+delay(x);
+YMF825.keyoff(ch);
+YMF825.keyoff(channel);
+
+
+YMF825.keyon(channel, 0x36);
+YMF825.keyon(ch, 0x41);
+delay(x);
+YMF825.keyoff(ch);
+YMF825.keyon(ch, 0x44);
+delay(x);
+YMF825.keyoff(ch);
+YMF825.keyon(ch, 0x41);
+delay(x);
+YMF825.keyoff(ch);
+YMF825.keyon(ch, 0x44);
+delay(x);
+YMF825.keyoff(ch);
+YMF825.keyoff(channel);
+
+YMF825.keyon(channel, 0x39);
+YMF825.keyon(ch, 0x42);
+delay(x);
+YMF825.keyoff(ch);
+YMF825.keyon(ch, 0x45);
+delay(x);
+YMF825.keyoff(ch);
+YMF825.keyon(ch, 0x42);
+delay(x);
+YMF825.keyoff(ch);
+YMF825.keyon(ch, 0x45);
+delay(x);
+YMF825.keyoff(ch);
+YMF825.keyoff(channel);
+
+YMF825.keyon(channel, 0x3A);
+YMF825.keyon(ch, 0x43);
+delay(x);
+YMF825.keyoff(ch);
+YMF825.keyon(ch, 0x46);
+delay(x);
+YMF825.keyoff(ch);
+YMF825.keyon(ch, 0x43);
+delay(x);
+YMF825.keyoff(ch);
+YMF825.keyon(ch, 0x46);
+delay(x);
+YMF825.keyoff(ch);
+YMF825.keyoff(channel);
+
+
+YMF825.keyon(channel, 0x3A);
+YMF825.keyon(ch, 0x45);
+delay(x);
+YMF825.keyoff(ch);
+YMF825.keyon(ch, 0x46);
+delay(x);
+YMF825.keyoff(ch);
+YMF825.keyon(ch, 0x47);
+delay(x);
+YMF825.keyoff(ch);
+YMF825.keyon(ch, 0x48);
+delay(x);
+YMF825.keyoff(ch);
+YMF825.keyoff(channel);
+
+
+YMF825.keyon(channel, 0x36);
+YMF825.keyon(ch, 0x41);
+delay(x);
+YMF825.keyoff(ch);
+YMF825.keyon(ch, 0x44);
+delay(x);
+YMF825.keyoff(ch);
+YMF825.keyon(ch, 0x41);
+delay(x);
+YMF825.keyoff(ch);
+YMF825.keyon(ch, 0x44);
+delay(x);
+YMF825.keyoff(ch);
+YMF825.keyoff(channel);
+
+YMF825.keyon(channel, 0x39);
+YMF825.keyon(ch, 0x42);
+delay(x);
+YMF825.keyoff(ch);
+YMF825.keyon(ch, 0x45);
+delay(x);
+YMF825.keyoff(ch);
+YMF825.keyon(ch, 0x42);
+delay(x);
+YMF825.keyoff(ch);
+YMF825.keyon(ch, 0x45);
+delay(x);
+YMF825.keyoff(ch);
+YMF825.keyoff(channel);
+
+YMF825.keyon(channel, 0x3A);
+YMF825.keyon(ch, 0x43);
+delay(x);
+YMF825.keyoff(ch);
+YMF825.keyon(ch, 0x46);
+delay(x);
+YMF825.keyoff(ch);
+YMF825.keyon(ch, 0x43);
+delay(x);
+YMF825.keyoff(ch);
+YMF825.keyon(ch, 0x46);
+delay(x);
+YMF825.keyoff(ch);
+YMF825.keyoff(channel);
+
+YMF825.keyon(channel, 0x3B);
+YMF825.keyon(ch, 0x45);
+delay(x);
+YMF825.keyoff(ch);
+YMF825.keyon(ch, 0x44);
+delay(x);
+YMF825.keyoff(ch);
+YMF825.keyon(ch, 0x43);
+delay(x);
+YMF825.keyoff(ch);
+YMF825.keyon(ch, 0x42);
+delay(x);
+YMF825.keyoff(ch);
+YMF825.keyoff(channel);
+
+
+YMF825.keyon(channel, 0x36);
+YMF825.keyon(ch, 0x41);
+delay(x);
+YMF825.keyoff(ch);
+YMF825.keyon(ch, 0x44);
+delay(x);
+YMF825.keyoff(ch);
+YMF825.keyon(ch, 0x41);
+delay(x);
+YMF825.keyoff(ch);
+YMF825.keyon(ch, 0x44);
+delay(x);
+YMF825.keyoff(ch);
+YMF825.keyoff(channel);
+
+YMF825.keyon(channel, 0x39);
+YMF825.keyon(ch, 0x42);
+delay(x);
+YMF825.keyoff(ch);
+YMF825.keyon(ch, 0x45);
+delay(x);
+YMF825.keyoff(ch);
+YMF825.keyon(ch, 0x42);
+delay(x);
+YMF825.keyoff(ch);
+YMF825.keyon(ch, 0x45);
+delay(x);
+YMF825.keyoff(ch);
+YMF825.keyoff(channel);
+
+YMF825.keyon(channel, 0x3A);
+YMF825.keyon(ch, 0x43);
+delay(x);
+YMF825.keyoff(ch);
+YMF825.keyon(ch, 0x46);
+delay(x);
+YMF825.keyoff(ch);
+YMF825.keyon(ch, 0x43);
+delay(x);
+YMF825.keyoff(ch);
+YMF825.keyon(ch, 0x46);
+delay(x);
+YMF825.keyoff(ch);
+YMF825.keyoff(channel);
+
+
+YMF825.keyon(channel, 0x3A);
+YMF825.keyon(ch, 0x45);
+delay(x);
+YMF825.keyoff(ch);
+YMF825.keyon(ch, 0x46);
+delay(x);
+YMF825.keyoff(ch);
+YMF825.keyon(ch, 0x47);
+delay(x);
+YMF825.keyoff(ch);
+YMF825.keyon(ch, 0x48);
+delay(x);
+YMF825.keyoff(ch);
+YMF825.keyoff(channel);
+
+
+YMF825.keyon(ch, 0x41);
+YMF825.keyon(channel, 0x31);
+delay(3*x);
+YMF825.keyoff(ch);
+YMF825.keyoff(channel);
+
+YMF825.keyon(ch, 0x48);
+YMF825.keyon(channel, 0x31);
+delay(3*x);
+YMF825.keyoff(channel);
+
+YMF825.keyon(channel, 0x31);
+delay(2*x);
+YMF825.keyoff(ch);
+YMF825.keyoff(channel);
+
+
+YMF825.keyon(ch, 0x42);
+YMF825.keyon(channel, 0x32);
+delay(3*x);
+YMF825.keyoff(ch);
+YMF825.keyoff(channel);
+
+YMF825.keyon(ch, 0x49);
+YMF825.keyon(channel, 0x32);
+delay(3*x);
+YMF825.keyoff(channel);
+
+YMF825.keyon(channel, 0x32);
+delay(2*x);
+YMF825.keyoff(ch);
+YMF825.keyoff(channel);
+
+
+YMF825.keyon(ch, 0x41);
+YMF825.keyon(channel, 0x31);
+delay(3*x);
+YMF825.keyoff(ch);
+YMF825.keyoff(channel);
+
+YMF825.keyon(ch, 0x48);
+YMF825.keyon(channel, 0x31);
+delay(3*x);
+YMF825.keyoff(channel);
+
+YMF825.keyon(channel, 0x31);
+delay(2*x);
+YMF825.keyoff(ch);
+YMF825.keyoff(channel);
+
+YMF825.keyon(ch, 0x40);
+YMF825.keyon(channel, 0x30);
+delay(3*x);
+YMF825.keyoff(ch);
+YMF825.keyoff(channel);
+
+YMF825.keyon(ch, 0x47);
+YMF825.keyon(channel, 0x30);
+delay(3*x);
+YMF825.keyoff(channel);
+
+YMF825.keyon(channel, 0x30);
+delay(2*x);
+YMF825.keyoff(ch);
+YMF825.keyoff(channel);
+
+
+
+
+YMF825.keyon(ch, 0x41);
+YMF825.keyon(channel, 0x31);
+delay(3*x);
+YMF825.keyoff(ch);
+YMF825.keyoff(channel);
+
+YMF825.keyon(ch, 0x48);
+YMF825.keyon(channel, 0x31);
+delay(3*x);
+YMF825.keyoff(channel);
+
+YMF825.keyon(channel, 0x31);
+delay(2*x);
+YMF825.keyoff(ch);
+YMF825.keyoff(channel);
+
+
+YMF825.keyon(ch, 0x42);
+YMF825.keyon(channel, 0x32);
+delay(3*x);
+YMF825.keyoff(ch);
+YMF825.keyoff(channel);
+
+YMF825.keyon(ch, 0x49);
+YMF825.keyon(channel, 0x32);
+delay(3*x);
+YMF825.keyoff(channel);
+
+YMF825.keyon(channel, 0x32);
+delay(2*x);
+YMF825.keyoff(ch);
+YMF825.keyoff(channel);
+
+
+YMF825.keyon(ch, 0x41);
+YMF825.keyon(channel, 0x31);
+delay(3*x);
+YMF825.keyoff(ch);
+YMF825.keyoff(channel);
+
+YMF825.keyon(ch, 0x48);
+YMF825.keyon(channel, 0x31);
+delay(3*x);
+YMF825.keyoff(channel);
+
+YMF825.keyon(channel, 0x31);
+delay(2*x);
+YMF825.keyoff(ch);
+YMF825.keyoff(channel);
+
+YMF825.keyon(ch, 0x40);
+YMF825.keyon(channel, 0x30);
+delay(3*x);
+YMF825.keyoff(ch);
+YMF825.keyoff(channel);
+
+YMF825.keyon(ch, 0x47);
+YMF825.keyon(channel, 0x30);
+delay(3*x);
+YMF825.keyoff(channel);
+
+YMF825.keyon(channel, 0x30);
+delay(2*x);
+YMF825.keyoff(ch);
+YMF825.keyoff(channel);
+
+
+
+YMF825.keyon(ch, 0x48);
+YMF825.keyon(channel, 0x31);
+delay(3*x);
+YMF825.keyoff(ch);
+YMF825.keyoff(channel);
+
+YMF825.keyon(ch, 0x51);
+YMF825.keyon(channel, 0x31);
+delay(3*x);
+YMF825.keyoff(channel);
+
+YMF825.keyon(channel, 0x31);
+delay(2*x);
+YMF825.keyoff(ch);
+YMF825.keyoff(channel);
+
+YMF825.keyon(ch, 0x49);
+YMF825.keyon(channel, 0x32);
+delay(3*x);
+YMF825.keyoff(ch);
+YMF825.keyoff(channel);
+
+YMF825.keyon(ch, 0x52);
+YMF825.keyon(channel, 0x32);
+delay(3*x);
+YMF825.keyoff(channel);
+
+YMF825.keyon(channel, 0x32);
+delay(2*x);
+YMF825.keyoff(ch);
+YMF825.keyoff(channel);
+
+YMF825.keyon(ch, 0x48);
+YMF825.keyon(channel, 0x31);
+delay(3*x);
+YMF825.keyoff(ch);
+YMF825.keyoff(channel);
+
+YMF825.keyon(ch, 0x51);
+YMF825.keyon(channel, 0x31);
+delay(3*x);
+YMF825.keyoff(channel);
+
+YMF825.keyon(channel, 0x31);
+delay(2*x);
+YMF825.keyoff(ch);
+YMF825.keyoff(channel);
+
+YMF825.keyon(ch, 0x47);
+YMF825.keyon(channel, 0x30);
+delay(3*x);
+YMF825.keyoff(ch);
+YMF825.keyoff(channel);
+
+YMF825.keyon(ch, 0x50);
+YMF825.keyon(channel, 0x30);
+delay(3*x);
+YMF825.keyoff(channel);
+
+YMF825.keyon(channel, 0x30);
+delay(2*x);
+YMF825.keyoff(ch);
+YMF825.keyoff(channel);
+
+
+YMF825.keyon(ch, 0x48);
+YMF825.keyon(channel, 0x31);
+delay(3*x);
+YMF825.keyoff(ch);
+YMF825.keyoff(channel);
+
+YMF825.keyon(ch, 0x51);
+YMF825.keyon(channel, 0x31);
+delay(3*x);
+YMF825.keyoff(channel);
+
+YMF825.keyon(channel, 0x31);
+delay(2*x);
+YMF825.keyoff(ch);
+YMF825.keyoff(channel);
+
+YMF825.keyon(ch, 0x49);
+YMF825.keyon(channel, 0x32);
+delay(2*x);
+YMF825.keyoff(channel);
+delay(x);
+YMF825.keyoff(ch);
+
+YMF825.keyon(ch, 0x52);
+YMF825.keyon(channel, 0x32);
+delay(2*x);
+YMF825.keyoff(channel);
+delay(x);
+
+YMF825.keyon(channel, 0x32);
+delay(2*x);
+YMF825.keyoff(ch);
+YMF825.keyoff(channel);
+
+
+
+YMF825.keyon(ch, 0x4A);
+YMF825.keyon(channel, 0x33);
+delay(3*x);
+YMF825.keyoff(ch);
+YMF825.keyoff(channel);
+
+YMF825.keyon(ch, 0x53);
+YMF825.keyon(channel, 0x33);
+delay(3*x);
+YMF825.keyoff(channel);
+
+YMF825.keyon(channel, 0x33);
+delay(2*x);
+YMF825.keyoff(ch);
+YMF825.keyoff(channel);
+
+
+
+YMF825.keyon(ch, 0x54);
+YMF825.keyon(channel, 0x34);
+delay(3*x);
+YMF825.keyoff(ch);
+YMF825.keyon(ch, 0x50);
+delay(x/2);
+YMF825.keyoff(ch);
+YMF825.keyon(ch, 0x51);
+delay(x/2);
+YMF825.keyoff(channel);
+
+YMF825.keyon(ch, 0x52);
+YMF825.keyon(channel, 0x34);
+delay(x);
+YMF825.keyoff(ch);
+YMF825.keyon(ch, 0x53);
+delay(x);
+YMF825.keyoff(ch);
+YMF825.keyoff(channel);
+
+YMF825.keyon(channel, 0x34);
+YMF825.keyon(ch, 0x54);
+delay(x);
+YMF825.keyoff(ch);
+YMF825.keyon(ch, 0x55);
+delay(x);
+YMF825.keyoff(ch);
+YMF825.keyoff(channel);
+
+
+
+
+  YMF825.keyon(channel, 0x32);
+  delay(x);
+  YMF825.keyoff(channel);
+  YMF825.keyon(channel, 0x39);
+  delay(x);
+    YMF825.keyoff(channel);
+
+  YMF825.keyon(ch, 0x56);
+  YMF825.keyon(channel, 0x32);
+  delay(x);
+  YMF825.keyoff(channel);
+  YMF825.keyon(channel, 0x39);
+  delay(x);
+  YMF825.keyoff(channel);
+  YMF825.keyoff(ch);
+
+  YMF825.keyon(ch, 0x54);
+  YMF825.keyon(channel, 0x32);
+  delay(x);
+  YMF825.keyoff(channel);
+  YMF825.keyoff(ch);
+
+  YMF825.keyon(ch, 0x56);
+  YMF825.keyon(channel, 0x39);
+  delay(x);
+  YMF825.keyoff(channel);
+  YMF825.keyon(channel, 0x32);
+  delay(x);
+  YMF825.keyoff(channel);
+  YMF825.keyoff(ch);
+
+  YMF825.keyon(ch, 0x51);
+  YMF825.keyon(channel, 0x39);
+  delay(x);
+  YMF825.keyoff(channel);
+  YMF825.keyoff(ch);
+
+
+  YMF825.keyon(ch, 0x56);
+  YMF825.keyon(channel, 0x34);
+  delay(x);
+  YMF825.keyoff(channel);
+  YMF825.keyon(channel, 0x3B);
+  delay(x);
+  YMF825.keyoff(channel);
+  YMF825.keyoff(ch);
+
+  YMF825.keyon(ch, 0x54);
+  YMF825.keyon(channel, 0x34);
+  delay(x);
+  YMF825.keyoff(channel);
+  YMF825.keyoff(ch);
+
+  YMF825.keyon(ch, 0x56);
+  YMF825.keyon(channel, 0x3B);
+  delay(x);
+  YMF825.keyoff(channel);
+  YMF825.keyon(channel, 0x34);
+  delay(x);
+  YMF825.keyoff(channel);
+  YMF825.keyoff(ch);
+
+  YMF825.keyon(ch, 0x51);
+  YMF825.keyon(channel, 0x3B);
+  delay(x);
+  YMF825.keyoff(channel);
+  YMF825.keyoff(ch);
+
+  YMF825.keyon(ch, 0x54);
+  YMF825.keyon(channel, 0x34);
+  delay(x);
+  YMF825.keyoff(channel);
+  YMF825.keyoff(ch);
+
+  YMF825.keyon(ch, 0x56);
+  YMF825.keyon(channel, 0x3B);
+  delay(x);
+  YMF825.keyoff(channel);
+
+  YMF825.keyon(channel, 0x31);
+  delay(x);
+  YMF825.keyoff(channel);
+  YMF825.keyoff(ch);
+
+  YMF825.keyon(ch, 0x51);
+  YMF825.keyon(channel, 0x38);
+  delay(x);
+  YMF825.keyoff(channel);
+  YMF825.keyoff(ch);
+
+  YMF825.keyon(ch, 0x58);
+  YMF825.keyon(channel, 0x31);
+  delay(x);
+  YMF825.keyoff(channel);
+  YMF825.keyoff(ch);
+
+  YMF825.keyon(ch, 0x59);
+  YMF825.keyon(channel, 0x38);
+  delay(x);
+  YMF825.keyoff(channel);
+  YMF825.keyoff(ch);
+
+  YMF825.keyon(ch, 0x5B);
+  YMF825.keyon(channel, 0x31);
+  delay(x);
+  YMF825.keyoff(channel);
+  YMF825.keyoff(ch);
+
+  YMF825.keyon(ch, 0x61);
+  YMF825.keyon(channel, 0x38);
+  delay(x);
+  YMF825.keyoff(channel);
+  YMF825.keyoff(ch);
+
+  YMF825.keyon(ch, 0x54);
+  YMF825.keyon(channel, 0x31);
+  delay(x);
+  YMF825.keyoff(channel);
+  YMF825.keyoff(ch);
+
+  YMF825.keyon(ch, 0x5B);
+  YMF825.keyon(channel, 0x38);
+  delay(x);
+  YMF825.keyoff(channel);
+  YMF825.keyoff(ch);
+
+  YMF825.keyon(ch, 0x59);
+  YMF825.keyon(channel, 0x36);
+  delay(x);
+  YMF825.keyoff(channel);
+  YMF825.keyoff(ch);
+
+  YMF825.keyon(ch, 0x58);
+  YMF825.keyon(channel, 0x41);
+  delay(x);
+  YMF825.keyoff(channel);
+  YMF825.keyoff(ch);
+
+  YMF825.keyon(ch, 0x54);
+  YMF825.keyon(channel, 0x36);
+  delay(x);
+  YMF825.keyoff(channel);
+  YMF825.keyoff(ch);
+
+  YMF825.keyon(ch, 0x56);
+  YMF825.keyon(channel, 0x41);
+  delay(x);
+  YMF825.keyoff(channel);
+  YMF825.keyon(channel, 0x36);
+  delay(x);
+  YMF825.keyoff(channel);
+  YMF825.keyon(channel, 0x41);
+  delay(x);
+  YMF825.keyoff(channel);
+  YMF825.keyoff(ch);
+
+  YMF825.keyon(ch, 0x54);
+  YMF825.keyon(channel, 0x36);
+  delay(x);
+  YMF825.keyoff(channel);
+  YMF825.keyoff(ch);
+
+  YMF825.keyon(ch, 0x56);
+  YMF825.keyon(channel, 0x41);
+  delay(x);
+  YMF825.keyoff(channel);
+  YMF825.keyoff(ch);
+
+
+  YMF825.keyon(channel, 0x32);
+  delay(x);
+  YMF825.keyoff(channel);
+  YMF825.keyon(channel, 0x39);
+  delay(x);
+  YMF825.keyoff(channel);
+
+  YMF825.keyon(ch, 0x56);
+  YMF825.keyon(channel, 0x32);
+  delay(x);
+  YMF825.keyoff(channel);
+  YMF825.keyon(channel, 0x39);
+  delay(x);
+  YMF825.keyoff(channel);
+  YMF825.keyoff(ch);
+
+  YMF825.keyon(ch, 0x54);
+  YMF825.keyon(channel, 0x32);
+  delay(x);
+  YMF825.keyoff(channel);
+  YMF825.keyoff(ch);
+
+  YMF825.keyon(ch, 0x56);
+  YMF825.keyon(channel, 0x39);
+  delay(x);
+  YMF825.keyoff(channel);
+  YMF825.keyon(channel, 0x32);
+  delay(x);
+  YMF825.keyoff(channel);
+  YMF825.keyoff(ch);
+
+  YMF825.keyon(ch, 0x58);
+  YMF825.keyon(channel, 0x39);
+  delay(x);
+  YMF825.keyoff(channel);
+  YMF825.keyoff(ch);
+
+  YMF825.keyon(ch, 0x59);
+  YMF825.keyon(channel, 0x34);
+  delay(x);
+  YMF825.keyoff(channel);
+  YMF825.keyon(channel, 0x3B);
+  delay(x);
+  YMF825.keyoff(channel);
+  YMF825.keyoff(ch);
+
+  YMF825.keyon(ch, 0x58);
+  YMF825.keyon(channel, 0x34);
+  delay(x);
+  YMF825.keyoff(channel);
+  YMF825.keyoff(ch);
+
+  YMF825.keyon(ch, 0x59);
+  YMF825.keyon(channel, 0x3B);
+  delay(x);
+  YMF825.keyoff(channel);
+  YMF825.keyon(channel, 0x34);
+  delay(x);
+  YMF825.keyoff(channel);
+  YMF825.keyoff(ch);
+
+  YMF825.keyon(ch, 0x59);
+  YMF825.keyon(channel, 0x3B);
+  delay(x);
+  YMF825.keyoff(channel);
+  YMF825.keyoff(ch);
+
+  YMF825.keyon(ch, 0x58);
+  YMF825.keyon(channel, 0x34);
+  delay(x);
+  YMF825.keyoff(channel);
+  YMF825.keyoff(ch);
+
+  YMF825.keyon(ch, 0x54);
+  YMF825.keyon(channel, 0x3B);
+  delay(x);
+  YMF825.keyoff(channel);
+
+  YMF825.keyon(channel, 0x31);
+  delay(x);
+  YMF825.keyoff(channel);
+  YMF825.keyoff(ch);
+
+  YMF825.keyon(ch, 0x51);
+  YMF825.keyon(channel, 0x38);
+  delay(x);
+  YMF825.keyoff(channel);
+  YMF825.keyoff(ch);
+
+  YMF825.keyon(ch, 0x56);
+  YMF825.keyon(channel, 0x31);
+  delay(x);
+  YMF825.keyoff(channel);
+  YMF825.keyoff(ch);
+
+  YMF825.keyon(ch, 0x61);
+  YMF825.keyon(channel, 0x38);
+  delay(x);
+  YMF825.keyoff(channel);
+  YMF825.keyoff(ch);
+
+  YMF825.keyon(ch, 0x5B);
+  YMF825.keyon(channel, 0x31);
+  delay(x);
+  YMF825.keyoff(channel);
+  YMF825.keyoff(ch);
+
+  YMF825.keyon(ch, 0x59);
+  YMF825.keyon(channel, 0x38);
+  delay(x);
+  YMF825.keyoff(channel);
+  YMF825.keyoff(ch);
+
+  YMF825.keyon(ch, 0x54);
+  YMF825.keyon(channel, 0x31);
+  delay(x);
+  YMF825.keyoff(channel);
+  YMF825.keyoff(ch);
+
+  YMF825.keyon(ch, 0x55);
+  YMF825.keyon(channel, 0x38);
+  delay(x);
+  YMF825.keyoff(channel);
+  YMF825.keyoff(ch);
+
+  YMF825.keyon(ch, 0x56);
+  YMF825.keyon(channel, 0x36);
+  delay(x);
+  YMF825.keyoff(channel);
+  YMF825.keyoff(ch);
+
+  YMF825.keyon(ch, 0x51);
+  YMF825.keyon(channel, 0x41);
+  delay(x);
+  YMF825.keyoff(channel);
+  YMF825.keyoff(ch);
+
+  YMF825.keyon(ch, 0x54);
+  YMF825.keyon(channel, 0x36);
+  delay(x);
+  YMF825.keyoff(channel);
+  YMF825.keyoff(ch);
+
+  YMF825.keyon(ch, 0x56);
+  YMF825.keyon(channel, 0x41);
+  delay(x);
+  YMF825.keyoff(channel);
+  YMF825.keyon(channel, 0x36);
+  delay(x);
+  YMF825.keyoff(channel);
+  YMF825.keyon(channel, 0x41);
+  delay(x);
+  YMF825.keyoff(channel);
+  YMF825.keyon(channel, 0x36);
+  delay(x);
+  YMF825.keyoff(channel);
+  YMF825.keyon(channel, 0x41);
+  delay(x);
+  YMF825.keyoff(channel);
+  YMF825.keyoff(ch);
+
+
+
+
+
+
+
+
+  YMF825.keyon(channel, 0x32);
+  delay(x);
+  YMF825.keyoff(channel);
+  YMF825.keyon(channel, 0x39);
+  delay(x);
+  YMF825.keyoff(channel);
+
+  YMF825.keyon(ch, 0x56);
+  YMF825.keyon(channel, 0x32);
+  delay(x);
+  YMF825.keyoff(channel);
+  YMF825.keyon(channel, 0x39);
+  delay(x);
+  YMF825.keyoff(channel);
+  YMF825.keyoff(ch);
+
+  YMF825.keyon(ch, 0x54);
+  YMF825.keyon(channel, 0x32);
+  delay(x);
+  YMF825.keyoff(channel);
+  YMF825.keyoff(ch);
+
+  YMF825.keyon(ch, 0x56);
+  YMF825.keyon(channel, 0x39);
+  delay(x);
+  YMF825.keyoff(channel);
+  YMF825.keyon(channel, 0x32);
+  delay(x);
+  YMF825.keyoff(channel);
+  YMF825.keyoff(ch);
+
+  YMF825.keyon(ch, 0x51);
+  YMF825.keyon(channel, 0x39);
+  delay(x);
+  YMF825.keyoff(channel);
+  YMF825.keyoff(ch);
+
+
+  YMF825.keyon(ch, 0x56);
+  YMF825.keyon(channel, 0x34);
+  delay(x);
+  YMF825.keyoff(channel);
+  YMF825.keyon(channel, 0x3B);
+  delay(x);
+  YMF825.keyoff(channel);
+  YMF825.keyoff(ch);
+
+  YMF825.keyon(ch, 0x54);
+  YMF825.keyon(channel, 0x34);
+  delay(x);
+  YMF825.keyoff(channel);
+  YMF825.keyoff(ch);
+
+  YMF825.keyon(ch, 0x56);
+  YMF825.keyon(channel, 0x3B);
+  delay(x);
+  YMF825.keyoff(channel);
+  YMF825.keyon(channel, 0x34);
+  delay(x);
+  YMF825.keyoff(channel);
+  YMF825.keyoff(ch);
+
+  YMF825.keyon(ch, 0x51);
+  YMF825.keyon(channel, 0x3B);
+  delay(x);
+  YMF825.keyoff(channel);
+  YMF825.keyoff(ch);
+
+  YMF825.keyon(ch, 0x54);
+  YMF825.keyon(channel, 0x34);
+  delay(x);
+  YMF825.keyoff(channel);
+  YMF825.keyoff(ch);
+
+  YMF825.keyon(ch, 0x56);
+  YMF825.keyon(channel, 0x3B);
+  delay(x);
+  YMF825.keyoff(channel);
+
+  YMF825.keyon(channel, 0x31);
+  delay(x);
+  YMF825.keyoff(channel);
+  YMF825.keyoff(ch);
+
+  YMF825.keyon(ch, 0x51);
+  YMF825.keyon(channel, 0x38);
+  delay(x);
+  YMF825.keyoff(channel);
+  YMF825.keyoff(ch);
+
+  YMF825.keyon(ch, 0x58);
+  YMF825.keyon(channel, 0x31);
+  delay(x);
+  YMF825.keyoff(channel);
+  YMF825.keyoff(ch);
+
+  YMF825.keyon(ch, 0x59);
+  YMF825.keyon(channel, 0x38);
+  delay(x);
+  YMF825.keyoff(channel);
+  YMF825.keyoff(ch);
+
+  YMF825.keyon(ch, 0x5B);
+  YMF825.keyon(channel, 0x31);
+  delay(x);
+  YMF825.keyoff(channel);
+  YMF825.keyoff(ch);
+
+  YMF825.keyon(ch, 0x61);
+  YMF825.keyon(channel, 0x38);
+  delay(x);
+  YMF825.keyoff(channel);
+  YMF825.keyoff(ch);
+
+  YMF825.keyon(ch, 0x54);
+  YMF825.keyon(channel, 0x31);
+  delay(x);
+  YMF825.keyoff(channel);
+  YMF825.keyoff(ch);
+
+  YMF825.keyon(ch, 0x5B);
+  YMF825.keyon(channel, 0x38);
+  delay(x);
+  YMF825.keyoff(channel);
+  YMF825.keyoff(ch);
+
+  YMF825.keyon(ch, 0x59);
+  YMF825.keyon(channel, 0x36);
+  delay(x);
+  YMF825.keyoff(channel);
+  YMF825.keyoff(ch);
+
+  YMF825.keyon(ch, 0x58);
+  YMF825.keyon(channel, 0x41);
+  delay(x);
+  YMF825.keyoff(channel);
+  YMF825.keyoff(ch);
+
+  YMF825.keyon(ch, 0x54);
+  YMF825.keyon(channel, 0x36);
+  delay(x);
+  YMF825.keyoff(channel);
+  YMF825.keyoff(ch);
+
+  YMF825.keyon(ch, 0x56);
+  YMF825.keyon(channel, 0x41);
+  delay(x);
+  YMF825.keyoff(channel);
+  YMF825.keyon(channel, 0x36);
+  delay(x);
+  YMF825.keyoff(channel);
+  YMF825.keyon(channel, 0x41);
+  delay(x);
+  YMF825.keyoff(channel);
+  YMF825.keyoff(ch);
+
+  YMF825.keyon(ch, 0x54);
+  YMF825.keyon(channel, 0x36);
+  delay(x);
+  YMF825.keyoff(channel);
+  YMF825.keyoff(ch);
+
+  YMF825.keyon(ch, 0x56);
+  YMF825.keyon(channel, 0x41);
+  delay(x);
+  YMF825.keyoff(channel);
+  YMF825.keyoff(ch);
+
+
+  YMF825.keyon(channel, 0x32);
+  delay(x);
+  YMF825.keyoff(channel);
+  YMF825.keyon(channel, 0x39);
+  delay(x);
+  YMF825.keyoff(channel);
+
+  YMF825.keyon(ch, 0x56);
+  YMF825.keyon(channel, 0x32);
+  delay(x);
+  YMF825.keyoff(channel);
+  YMF825.keyon(channel, 0x39);
+  delay(x);
+  YMF825.keyoff(channel);
+  YMF825.keyoff(ch);
+
+  YMF825.keyon(ch, 0x54);
+  YMF825.keyon(channel, 0x32);
+  delay(x);
+  YMF825.keyoff(channel);
+  YMF825.keyoff(ch);
+
+  YMF825.keyon(ch, 0x56);
+  YMF825.keyon(channel, 0x39);
+  delay(x);
+  YMF825.keyoff(channel);
+  YMF825.keyon(channel, 0x32);
+  delay(x);
+  YMF825.keyoff(channel);
+  YMF825.keyoff(ch);
+
+  YMF825.keyon(ch, 0x58);
+  YMF825.keyon(channel, 0x39);
+  delay(x);
+  YMF825.keyoff(channel);
+  YMF825.keyoff(ch);
+
+  YMF825.keyon(ch, 0x59);
+  YMF825.keyon(channel, 0x34);
+  delay(x);
+  YMF825.keyoff(channel);
+  YMF825.keyon(channel, 0x3B);
+  delay(x);
+  YMF825.keyoff(channel);
+  YMF825.keyoff(ch);
+
+  YMF825.keyon(ch, 0x58);
+  YMF825.keyon(channel, 0x34);
+  delay(x);
+  YMF825.keyoff(channel);
+  YMF825.keyoff(ch);
+
+  YMF825.keyon(ch, 0x59);
+  YMF825.keyon(channel, 0x3B);
+  delay(x);
+  YMF825.keyoff(channel);
+  YMF825.keyon(channel, 0x34);
+  delay(x);
+  YMF825.keyoff(channel);
+  YMF825.keyoff(ch);
+
+  YMF825.keyon(ch, 0x59);
+  YMF825.keyon(channel, 0x3B);
+  delay(x);
+  YMF825.keyoff(channel);
+  YMF825.keyoff(ch);
+
+  YMF825.keyon(ch, 0x58);
+  YMF825.keyon(channel, 0x34);
+  delay(x);
+  YMF825.keyoff(channel);
+  YMF825.keyoff(ch);
+
+  YMF825.keyon(ch, 0x54);
+  YMF825.keyon(channel, 0x3B);
+  delay(x);
+  YMF825.keyoff(channel);
+
+  YMF825.keyon(channel, 0x31);
+  delay(x);
+  YMF825.keyoff(channel);
+  YMF825.keyoff(ch);
+
+  YMF825.keyon(ch, 0x51);
+  YMF825.keyon(channel, 0x38);
+  delay(x);
+  YMF825.keyoff(channel);
+  YMF825.keyoff(ch);
+
+  YMF825.keyon(ch, 0x56);
+  YMF825.keyon(channel, 0x31);
+  delay(x);
+  YMF825.keyoff(channel);
+  YMF825.keyoff(ch);
+
+  YMF825.keyon(ch, 0x61);
+  YMF825.keyon(channel, 0x38);
+  delay(x);
+  YMF825.keyoff(channel);
+  YMF825.keyoff(ch);
+
+  YMF825.keyon(ch, 0x5B);
+  YMF825.keyon(channel, 0x31);
+  delay(x);
+  YMF825.keyoff(channel);
+  YMF825.keyoff(ch);
+
+  YMF825.keyon(ch, 0x59);
+  YMF825.keyon(channel, 0x38);
+  delay(x);
+  YMF825.keyoff(channel);
+  YMF825.keyoff(ch);
+
+  YMF825.keyon(ch, 0x54);
+  YMF825.keyon(channel, 0x31);
+  delay(x);
+  YMF825.keyoff(channel);
+  YMF825.keyoff(ch);
+
+  YMF825.keyon(ch, 0x55);
+  YMF825.keyon(channel, 0x38);
+  delay(x);
+  YMF825.keyoff(channel);
+  YMF825.keyoff(ch);
+
+  YMF825.keyon(ch, 0x56);
+  YMF825.keyon(channel, 0x36);
+  delay(x);
+  YMF825.keyoff(channel);
+  YMF825.keyoff(ch);
+
+  YMF825.keyon(ch, 0x51);
+  YMF825.keyon(channel, 0x41);
+  delay(x);
+  YMF825.keyoff(channel);
+  YMF825.keyoff(ch);
+
+  YMF825.keyon(ch, 0x54);
+  YMF825.keyon(channel, 0x36);
+  delay(x);
+  YMF825.keyoff(channel);
+  YMF825.keyoff(ch);
+
+  YMF825.keyon(ch, 0x56);
+  YMF825.keyon(channel, 0x41);
+  delay(x);
+  YMF825.keyoff(channel);
+  YMF825.keyon(channel, 0x36);
+  delay(x);
+  YMF825.keyoff(channel);
+  YMF825.keyon(channel, 0x41);
+  delay(x);
+  YMF825.keyoff(channel);
+  YMF825.keyon(channel, 0x36);
+  delay(x);
+  YMF825.keyoff(channel);
+  YMF825.keyon(channel, 0x41);
+  delay(x);
+  YMF825.keyoff(channel);
+  YMF825.keyoff(ch);
+
+
+
+
+
+
+
+
+
+
+
+  YMF825.keyon(channel, 0x3B);
+  delay(2*x);
+
+  YMF825.keyon(ch, 0x58);
+  delay(2*x);
+  YMF825.keyoff(ch);
+
+  YMF825.keyon(ch, 0x56);
+  delay(x);
+  YMF825.keyoff(ch);
+
+  YMF825.keyon(ch, 0x58);
+  delay(2*x);
+  YMF825.keyoff(ch);
+
+
+  YMF825.keyon(ch, 0x53);
+  delay(x);
+  YMF825.keyoff(ch);
+  YMF825.keyoff(channel);
+
+  YMF825.keyon(channel, 0x41);
+  YMF825.keyon(ch, 0x58);
+  delay(2*x);
+  YMF825.keyoff(ch);
+
+  YMF825.keyon(ch, 0x56);
+  delay(x);
+  YMF825.keyoff(ch);
+
+  YMF825.keyon(ch, 0x58);
+  delay(2*x);
+  YMF825.keyoff(ch);
+
+  YMF825.keyon(ch, 0x53);
+  delay(x);
+  YMF825.keyoff(ch);
+
+  YMF825.keyon(ch, 0x56);
+  delay(x);
+  YMF825.keyoff(ch);
+  YMF825.keyoff(channel);
+
+  YMF825.keyon(channel, 0x3A);
+  YMF825.keyon(ch, 0x58);
+  delay(2*x);
+  YMF825.keyoff(ch);
+
+  YMF825.keyon(ch, 0x53);
+  delay(x);
+  YMF825.keyoff(ch);
+
+  YMF825.keyon(ch, 0x5A);
+  delay(x);
+  YMF825.keyoff(ch);
+
+  YMF825.keyon(ch, 0x5B);
+  delay(x);
+  YMF825.keyoff(ch);
+
+  YMF825.keyon(ch, 0x61);
+  delay(x);
+  YMF825.keyoff(ch);
+
+  YMF825.keyon(ch, 0x63);
+  delay(x);
+  YMF825.keyoff(ch);
+
+  YMF825.keyon(ch, 0x56);
+  delay(x);
+  YMF825.keyoff(ch);
+  YMF825.keyoff(channel);
+
+  YMF825.keyon(channel, 0x43);
+  YMF825.keyon(ch, 0x61);
+  delay(x);
+  YMF825.keyoff(ch);
+
+  YMF825.keyon(ch, 0x5B);
+  delay(x);
+  YMF825.keyoff(ch);
+
+  YMF825.keyon(ch, 0x5A);
+  delay(x);
+  YMF825.keyoff(ch);
+
+  YMF825.keyon(ch, 0x56);
+  delay(x);
+  YMF825.keyoff(ch);
+
+  YMF825.keyon(ch, 0x58);
+  delay(3*x);
+  YMF825.keyoff(ch);
+
+  YMF825.keyon(ch, 0x56);
+  delay(x);
+  YMF825.keyoff(ch);
+
+  YMF825.keyon(ch, 0x58);
+  delay(x);
+  YMF825.keyoff(ch);
+  YMF825.keyoff(channel);
+
+  YMF825.keyon(channel, 0x3B);
+  delay(2*x);
+
+  YMF825.keyon(ch, 0x58);
+  delay(2*x);
+  YMF825.keyoff(ch);
+
+  YMF825.keyon(ch, 0x56);
+  delay(x);
+  YMF825.keyoff(ch);
+
+  YMF825.keyon(ch, 0x58);
+  delay(2*x);
+  YMF825.keyoff(ch);
+
+  YMF825.keyon(ch, 0x5A);
+  delay(x);
+  YMF825.keyoff(ch);
+  YMF825.keyoff(channel);
+
+  YMF825.keyon(channel, 0x41);
+  YMF825.keyon(ch, 0x5B);
+  delay(2*x);
+  YMF825.keyoff(ch);
+
+  YMF825.keyon(ch, 0x5A);
+  delay(x);
+  YMF825.keyoff(ch);
+
+  YMF825.keyon(ch, 0x5B);
+  delay(2*x);
+  YMF825.keyoff(ch);
+
+  YMF825.keyon(ch, 0x5B);
+  delay(x);
+  YMF825.keyoff(ch);
+
+  YMF825.keyon(ch, 0x5A);
+  delay(x);
+  YMF825.keyoff(ch);
+  YMF825.keyoff(channel);
+
+  YMF825.keyon(channel, 0x3A);
+  YMF825.keyon(ch, 0x56);
+  delay(2*x);
+  YMF825.keyoff(ch);
+
+  YMF825.keyon(ch, 0x53);
+  delay(x);
+  YMF825.keyoff(ch);
+
+  YMF825.keyon(ch, 0x58);
+  delay(x);
+  YMF825.keyoff(ch);
+
+  YMF825.keyon(ch, 0x63);
+  delay(x);
+  YMF825.keyoff(ch);
+
+  YMF825.keyon(ch, 0x61);
+  delay(x);
+  YMF825.keyoff(ch);
+
+  YMF825.keyon(ch, 0x5B);
+  delay(x);
+  YMF825.keyoff(ch);
+
+  YMF825.keyon(ch, 0x56);
+  delay(x);
+  YMF825.keyoff(ch);
+  YMF825.keyoff(channel);
+
+  YMF825.keyon(channel, 0x43);
+  YMF825.keyon(ch, 0x57);
+  delay(x);
+  YMF825.keyoff(ch);
+
+  YMF825.keyon(ch, 0x58);
+  delay(x);
+  YMF825.keyoff(ch);
+
+  YMF825.keyon(ch, 0x53);
+  delay(x);
+  YMF825.keyoff(ch);
+
+  YMF825.keyon(ch, 0x56);
+  delay(x);
+  YMF825.keyoff(ch);
+
+  YMF825.keyon(ch, 0x58);
+  delay(4*x);
+  YMF825.keyoff(ch);
+  YMF825.keyoff(channel);
+
+
+YMF825.keyon(channel, 0x34);
+delay(x);
+YMF825.keyoff(channel);
+YMF825.keyon(channel, 0x3B);
+delay(x);
+YMF825.keyoff(channel);
+
+YMF825.keyon(ch, 0x58);
+YMF825.keyon(channel, 0x34);
+delay(x);
+YMF825.keyoff(channel);
+YMF825.keyon(channel, 0x3B);
+delay(x);
+YMF825.keyoff(channel);
+YMF825.keyoff(ch);
+
+YMF825.keyon(ch, 0x56);
+YMF825.keyon(channel, 0x34);
+delay(x);
+YMF825.keyoff(channel);
+YMF825.keyoff(ch);
+
+YMF825.keyon(ch, 0x58);
+YMF825.keyon(channel, 0x3B);
+delay(x);
+YMF825.keyoff(channel);
+YMF825.keyon(channel, 0x34);
+delay(x);
+YMF825.keyoff(channel);
+YMF825.keyoff(ch);
+
+YMF825.keyon(ch, 0x53);
+YMF825.keyon(channel, 0x3B);
+delay(x);
+YMF825.keyoff(channel);
+YMF825.keyoff(ch);
+
+YMF825.keyon(ch, 0x58);
+YMF825.keyon(channel, 0x36);
+delay(x);
+YMF825.keyoff(channel);
+YMF825.keyon(channel, 0x41);
+delay(x);
+YMF825.keyoff(channel);
+YMF825.keyoff(ch);
+
+YMF825.keyon(ch, 0x56);
+YMF825.keyon(channel, 0x36);
+delay(x);
+YMF825.keyoff(channel);
+YMF825.keyoff(ch);
+
+YMF825.keyon(ch, 0x58);
+YMF825.keyon(channel, 0x41);
+delay(x);
+YMF825.keyoff(channel);
+YMF825.keyon(channel, 0x36);
+delay(x);
+YMF825.keyoff(channel);
+YMF825.keyoff(ch);
+
+YMF825.keyon(ch, 0x53);
+YMF825.keyon(channel, 0x41);
+delay(x);
+YMF825.keyoff(channel);
+YMF825.keyoff(ch);
+
+YMF825.keyon(ch, 0x56);
+YMF825.keyon(channel, 0x36);
+delay(x);
+YMF825.keyoff(channel);
+YMF825.keyoff(ch);
+
+YMF825.keyon(ch, 0x58);
+YMF825.keyon(channel, 0x41);
+delay(x);
+YMF825.keyoff(channel);
+
+YMF825.keyon(channel, 0x33);
+delay(x);
+YMF825.keyoff(channel);
+YMF825.keyoff(ch);
+
+YMF825.keyon(ch, 0x53);
+YMF825.keyon(channel, 0x3A);
+delay(x);
+YMF825.keyoff(channel);
+YMF825.keyoff(ch);
+
+YMF825.keyon(ch, 0x5A);
+YMF825.keyon(channel, 0x33);
+delay(x);
+YMF825.keyoff(channel);
+YMF825.keyoff(ch);
+
+YMF825.keyon(ch, 0x5B);
+YMF825.keyon(channel, 0x3A);
+delay(x);
+YMF825.keyoff(channel);
+YMF825.keyoff(ch);
+
+YMF825.keyon(ch, 0x61);
+YMF825.keyon(channel, 0x33);
+delay(x);
+YMF825.keyoff(channel);
+YMF825.keyoff(ch);
+
+YMF825.keyon(ch, 0x63);
+YMF825.keyon(channel, 0x3A);
+delay(x);
+YMF825.keyoff(channel);
+YMF825.keyoff(ch);
+
+YMF825.keyon(ch, 0x56);
+YMF825.keyon(channel, 0x33);
+delay(x);
+YMF825.keyoff(channel);
+YMF825.keyoff(ch);
+
+YMF825.keyon(ch, 0x61);
+YMF825.keyon(channel, 0x3A);
+delay(x);
+YMF825.keyoff(channel);
+YMF825.keyoff(ch);
+
+YMF825.keyon(ch, 0x5B);
+YMF825.keyon(channel, 0x38);
+delay(x);
+YMF825.keyoff(channel);
+YMF825.keyoff(ch);
+
+YMF825.keyon(ch, 0x5A);
+YMF825.keyon(channel, 0x43);
+delay(x);
+YMF825.keyoff(channel);
+YMF825.keyoff(ch);
+
+YMF825.keyon(ch, 0x56);
+YMF825.keyon(channel, 0x38);
+delay(x);
+YMF825.keyoff(channel);
+YMF825.keyoff(ch);
+
+YMF825.keyon(ch, 0x58);
+YMF825.keyon(channel, 0x43);
+delay(x);
+YMF825.keyoff(channel);
+YMF825.keyon(channel, 0x38);
+delay(x);
+YMF825.keyoff(channel);
+YMF825.keyon(channel, 0x43);
+delay(x);
+YMF825.keyoff(channel);
+YMF825.keyoff(ch);
+
+YMF825.keyon(ch, 0x56);
+YMF825.keyon(channel, 0x38);
+delay(x);
+YMF825.keyoff(channel);
+YMF825.keyoff(ch);
+
+YMF825.keyon(ch, 0x58);
+YMF825.keyon(channel, 0x43);
+delay(x);
+YMF825.keyoff(channel);
+YMF825.keyoff(ch);
+
+
+
+  YMF825.keyon(channel, 0x34);
+  delay(x);
+  YMF825.keyoff(channel);
+  YMF825.keyon(channel, 0x3B);
+  delay(x);
+  YMF825.keyoff(channel);
+
+  YMF825.keyon(ch, 0x58);
+  YMF825.keyon(channel, 0x34);
+  delay(x);
+  YMF825.keyoff(channel);
+  YMF825.keyon(channel, 0x3B);
+  delay(x);
+  YMF825.keyoff(channel);
+  YMF825.keyoff(ch);
+
+  YMF825.keyon(ch, 0x56);
+  YMF825.keyon(channel, 0x34);
+  delay(x);
+  YMF825.keyoff(channel);
+  YMF825.keyoff(ch);
+
+  YMF825.keyon(ch, 0x58);
+  YMF825.keyon(channel, 0x3B);
+  delay(x);
+  YMF825.keyoff(channel);
+  YMF825.keyon(channel, 0x34);
+  delay(x);
+  YMF825.keyoff(channel);
+  YMF825.keyoff(ch);
+
+  YMF825.keyon(ch, 0x5A);
+  YMF825.keyon(channel, 0x3B);
+  delay(x);
+  YMF825.keyoff(channel);
+  YMF825.keyoff(ch);
+
+  YMF825.keyon(ch, 0x5B);
+  YMF825.keyon(channel, 0x36);
+  delay(x);
+  YMF825.keyoff(channel);
+  YMF825.keyon(channel, 0x41);
+  delay(x);
+  YMF825.keyoff(channel);
+  YMF825.keyoff(ch);
+
+  YMF825.keyon(ch, 0x5A);
+  YMF825.keyon(channel, 0x36);
+  delay(x);
+  YMF825.keyoff(channel);
+  YMF825.keyoff(ch);
+
+  YMF825.keyon(ch, 0x5B);
+  YMF825.keyon(channel, 0x41);
+  delay(x);
+  YMF825.keyoff(channel);
+  YMF825.keyon(channel, 0x36);
+  delay(x);
+  YMF825.keyoff(channel);
+  YMF825.keyoff(ch);
+
+  YMF825.keyon(ch, 0x5B);
+  YMF825.keyon(channel, 0x41);
+  delay(x);
+  YMF825.keyoff(channel);
+  YMF825.keyoff(ch);
+
+  YMF825.keyon(ch, 0x5A);
+  YMF825.keyon(channel, 0x36);
+  delay(x);
+  YMF825.keyoff(channel);
+  YMF825.keyoff(ch);
+
+  YMF825.keyon(ch, 0x56);
+  YMF825.keyon(channel, 0x41);
+  delay(x);
+  YMF825.keyoff(channel);
+  YMF825.keyon(channel, 0x33);
+  delay(x);
+  YMF825.keyoff(channel);
+  YMF825.keyoff(ch);
+
+  YMF825.keyon(ch, 0x53);
+  YMF825.keyon(channel, 0x3A);
+  delay(x);
+  YMF825.keyoff(channel);
+  YMF825.keyoff(ch);
+
+  YMF825.keyon(ch, 0x58);
+  YMF825.keyon(channel, 0x33);
+  delay(x);
+  YMF825.keyoff(channel);
+  YMF825.keyoff(ch);
+
+  YMF825.keyon(ch, 0x63);
+  YMF825.keyon(channel, 0x3A);
+  delay(x);
+  YMF825.keyoff(channel);
+  YMF825.keyoff(ch);
+
+  YMF825.keyon(ch, 0x61);
+  YMF825.keyon(channel, 0x33);
+  delay(x);
+  YMF825.keyoff(channel);
+  YMF825.keyoff(ch);
+
+  YMF825.keyon(ch, 0x5B);
+  YMF825.keyon(channel, 0x3A);
+  delay(x);
+  YMF825.keyoff(channel);
+  YMF825.keyoff(ch);
+
+  YMF825.keyon(ch, 0x56);
+  YMF825.keyon(channel, 0x33);
+  delay(x);
+  YMF825.keyoff(channel);
+  YMF825.keyoff(ch);
+
+  YMF825.keyon(ch, 0x57);
+  YMF825.keyon(channel, 0x3A);
+  delay(x);
+  YMF825.keyoff(channel);
+  YMF825.keyoff(ch);
+
+  YMF825.keyon(ch, 0x58);
+  YMF825.keyon(channel, 0x38);
+  delay(x);
+  YMF825.keyoff(channel);
+  YMF825.keyoff(ch);
+
+  YMF825.keyon(ch, 0x53);
+  YMF825.keyon(channel, 0x43);
+  delay(x);
+  YMF825.keyoff(channel);
+  YMF825.keyoff(ch);
+
+  YMF825.keyon(ch, 0x56);
+  YMF825.keyon(channel, 0x38);
+  delay(x);
+  YMF825.keyoff(channel);
+  YMF825.keyoff(ch);
+
+  YMF825.keyon(ch, 0x58);
+  YMF825.keyon(channel, 0x43);
+  delay(x);
+  YMF825.keyoff(channel);
+  YMF825.keyon(channel, 0x38);
+  delay(x);
+  YMF825.keyoff(channel);
+  YMF825.keyon(channel, 0x43);
+  delay(x);
+  YMF825.keyoff(channel);
+  YMF825.keyon(channel, 0x38);
+  delay(x);
+  YMF825.keyoff(channel);
+  YMF825.keyon(channel, 0x43);
+  delay(x);
+  YMF825.keyoff(channel);
+  YMF825.keyoff(ch);
+
+
+
+
+
+  YMF825.keyon(channel, 0x34);
+delay(x);
+YMF825.keyoff(channel);
+YMF825.keyon(channel, 0x3B);
+delay(x);
+YMF825.keyoff(channel);
+
+YMF825.keyon(ch, 0x58);
+YMF825.keyon(channel, 0x34);
+delay(x);
+YMF825.keyoff(channel);
+YMF825.keyon(channel, 0x3B);
+delay(x);
+YMF825.keyoff(channel);
+YMF825.keyoff(ch);
+
+YMF825.keyon(ch, 0x56);
+YMF825.keyon(channel, 0x34);
+delay(x);
+YMF825.keyoff(channel);
+YMF825.keyoff(ch);
+
+YMF825.keyon(ch, 0x58);
+YMF825.keyon(channel, 0x3B);
+delay(x);
+YMF825.keyoff(channel);
+YMF825.keyon(channel, 0x34);
+delay(x);
+YMF825.keyoff(channel);
+YMF825.keyoff(ch);
+
+YMF825.keyon(ch, 0x53);
+YMF825.keyon(channel, 0x3B);
+delay(x);
+YMF825.keyoff(channel);
+YMF825.keyoff(ch);
+
+YMF825.keyon(ch, 0x58);
+YMF825.keyon(channel, 0x36);
+delay(x);
+YMF825.keyoff(channel);
+YMF825.keyon(channel, 0x41);
+delay(x);
+YMF825.keyoff(channel);
+YMF825.keyoff(ch);
+
+YMF825.keyon(ch, 0x56);
+YMF825.keyon(channel, 0x36);
+delay(x);
+YMF825.keyoff(channel);
+YMF825.keyoff(ch);
+
+YMF825.keyon(ch, 0x58);
+YMF825.keyon(channel, 0x41);
+delay(x);
+YMF825.keyoff(channel);
+YMF825.keyon(channel, 0x36);
+delay(x);
+YMF825.keyoff(channel);
+YMF825.keyoff(ch);
+
+YMF825.keyon(ch, 0x53);
+YMF825.keyon(channel, 0x41);
+delay(x);
+YMF825.keyoff(channel);
+YMF825.keyoff(ch);
+
+YMF825.keyon(ch, 0x56);
+YMF825.keyon(channel, 0x36);
+delay(x);
+YMF825.keyoff(channel);
+YMF825.keyoff(ch);
+
+YMF825.keyon(ch, 0x58);
+YMF825.keyon(channel, 0x41);
+delay(x);
+YMF825.keyoff(channel);
+
+YMF825.keyon(channel, 0x33);
+delay(x);
+YMF825.keyoff(channel);
+YMF825.keyoff(ch);
+
+YMF825.keyon(ch, 0x53);
+YMF825.keyon(channel, 0x3A);
+delay(x);
+YMF825.keyoff(channel);
+YMF825.keyoff(ch);
+
+YMF825.keyon(ch, 0x5A);
+YMF825.keyon(channel, 0x33);
+delay(x);
+YMF825.keyoff(channel);
+YMF825.keyoff(ch);
+
+YMF825.keyon(ch, 0x5B);
+YMF825.keyon(channel, 0x3A);
+delay(x);
+YMF825.keyoff(channel);
+YMF825.keyoff(ch);
+
+YMF825.keyon(ch, 0x61);
+YMF825.keyon(channel, 0x33);
+delay(x);
+YMF825.keyoff(channel);
+YMF825.keyoff(ch);
+
+YMF825.keyon(ch, 0x63);
+YMF825.keyon(channel, 0x3A);
+delay(x);
+YMF825.keyoff(channel);
+YMF825.keyoff(ch);
+
+YMF825.keyon(ch, 0x56);
+YMF825.keyon(channel, 0x33);
+delay(x);
+YMF825.keyoff(channel);
+YMF825.keyoff(ch);
+
+YMF825.keyon(ch, 0x61);
+YMF825.keyon(channel, 0x3A);
+delay(x);
+YMF825.keyoff(channel);
+YMF825.keyoff(ch);
+
+YMF825.keyon(ch, 0x5B);
+YMF825.keyon(channel, 0x38);
+delay(x);
+YMF825.keyoff(channel);
+YMF825.keyoff(ch);
+
+YMF825.keyon(ch, 0x5A);
+YMF825.keyon(channel, 0x43);
+delay(x);
+YMF825.keyoff(channel);
+YMF825.keyoff(ch);
+
+YMF825.keyon(ch, 0x56);
+YMF825.keyon(channel, 0x38);
+delay(x);
+YMF825.keyoff(channel);
+YMF825.keyoff(ch);
+
+YMF825.keyon(ch, 0x58);
+YMF825.keyon(channel, 0x43);
+delay(x);
+YMF825.keyoff(channel);
+YMF825.keyon(channel, 0x38);
+delay(x);
+YMF825.keyoff(channel);
+YMF825.keyon(channel, 0x43);
+delay(x);
+YMF825.keyoff(channel);
+YMF825.keyoff(ch);
+
+YMF825.keyon(ch, 0x56);
+YMF825.keyon(channel, 0x38);
+delay(x);
+YMF825.keyoff(channel);
+YMF825.keyoff(ch);
+
+YMF825.keyon(ch, 0x58);
+YMF825.keyon(channel, 0x43);
+delay(x);
+YMF825.keyoff(channel);
+YMF825.keyoff(ch);
+
+
+
+  YMF825.keyon(channel, 0x34);
+  delay(x);
+  YMF825.keyoff(channel);
+  YMF825.keyon(channel, 0x3B);
+  delay(x);
+  YMF825.keyoff(channel);
+
+  YMF825.keyon(ch, 0x58);
+  YMF825.keyon(channel, 0x34);
+  delay(x);
+  YMF825.keyoff(channel);
+  YMF825.keyon(channel, 0x3B);
+  delay(x);
+  YMF825.keyoff(channel);
+  YMF825.keyoff(ch);
+
+  YMF825.keyon(ch, 0x56);
+  YMF825.keyon(channel, 0x34);
+  delay(x);
+  YMF825.keyoff(channel);
+  YMF825.keyoff(ch);
+
+  YMF825.keyon(ch, 0x58);
+  YMF825.keyon(channel, 0x3B);
+  delay(x);
+  YMF825.keyoff(channel);
+  YMF825.keyon(channel, 0x34);
+  delay(x);
+  YMF825.keyoff(channel);
+  YMF825.keyoff(ch);
+
+  YMF825.keyon(ch, 0x5A);
+  YMF825.keyon(channel, 0x3B);
+  delay(x);
+  YMF825.keyoff(channel);
+  YMF825.keyoff(ch);
+
+  YMF825.keyon(ch, 0x5B);
+  YMF825.keyon(channel, 0x36);
+  delay(x);
+  YMF825.keyoff(channel);
+  YMF825.keyon(channel, 0x41);
+  delay(x);
+  YMF825.keyoff(channel);
+  YMF825.keyoff(ch);
+
+  YMF825.keyon(ch, 0x5A);
+  YMF825.keyon(channel, 0x36);
+  delay(x);
+  YMF825.keyoff(channel);
+  YMF825.keyoff(ch);
+
+  YMF825.keyon(ch, 0x5B);
+  YMF825.keyon(channel, 0x41);
+  delay(x);
+  YMF825.keyoff(channel);
+  YMF825.keyon(channel, 0x36);
+  delay(x);
+  YMF825.keyoff(channel);
+  YMF825.keyoff(ch);
+
+  YMF825.keyon(ch, 0x5B);
+  YMF825.keyon(channel, 0x41);
+  delay(x);
+  YMF825.keyoff(channel);
+  YMF825.keyoff(ch);
+
+  YMF825.keyon(ch, 0x5A);
+  YMF825.keyon(channel, 0x36);
+  delay(x);
+  YMF825.keyoff(channel);
+  YMF825.keyoff(ch);
+
+  YMF825.keyon(ch, 0x56);
+  YMF825.keyon(channel, 0x41);
+  delay(x);
+  YMF825.keyoff(channel);
+  YMF825.keyon(channel, 0x33);
+  delay(x);
+  YMF825.keyoff(channel);
+  YMF825.keyoff(ch);
+
+  YMF825.keyon(ch, 0x58);
+  YMF825.keyon(channel, 0x3A);
+  delay(x);
+  YMF825.keyoff(channel);
+  YMF825.keyoff(ch);
+
+  YMF825.keyon(ch, 0x58);
+  YMF825.keyon(channel, 0x33);
+  delay(x);
+  YMF825.keyoff(channel);
+  YMF825.keyoff(ch);
+
+  YMF825.keyon(ch, 0x63);
+  YMF825.keyon(channel, 0x3A);
+  delay(x);
+  YMF825.keyoff(channel);
+  YMF825.keyoff(ch);
+
+  YMF825.keyon(ch, 0x61);
+  YMF825.keyon(channel, 0x33);
+  delay(x);
+  YMF825.keyoff(channel);
+  YMF825.keyoff(ch);
+
+  YMF825.keyon(ch, 0x63);
+  YMF825.keyon(channel, 0x3A);
+  delay(x);
+  YMF825.keyoff(channel);
+  YMF825.keyoff(ch);
+
+  YMF825.keyon(ch, 0x66);
+  YMF825.keyon(channel, 0x33);
+  delay(x);
+  YMF825.keyoff(channel);
+  YMF825.keyoff(ch);
+
+  YMF825.keyon(ch, 0x67);
+  YMF825.keyon(channel, 0x3A);
+  delay(x);
+  YMF825.keyoff(channel);
+  YMF825.keyoff(ch);
+
+  YMF825.keyon(ch, 0x68);
+  YMF825.keyon(channel, 0x38);
+  delay(x);
+  YMF825.keyoff(channel);
+  YMF825.keyoff(ch);
+
+  YMF825.keyon(ch, 0x63);
+  YMF825.keyon(channel, 0x43);
+  delay(x);
+  YMF825.keyoff(channel);
+  YMF825.keyoff(ch);
+
+  YMF825.keyon(ch, 0x66);
+  YMF825.keyon(channel, 0x38);
+  delay(x);
+  YMF825.keyoff(channel);
+  YMF825.keyoff(ch);
+
+  YMF825.keyon(ch, 0x68);
+  YMF825.keyon(channel, 0x43);
+  delay(x);
+  YMF825.keyoff(channel);
+  YMF825.keyon(channel, 0x38);
+  delay(x);
+  YMF825.keyoff(channel);
+  YMF825.keyon(channel, 0x43);
+  delay(x);
+  YMF825.keyoff(channel);
+  YMF825.keyon(channel, 0x38);
+  delay(x);
+  YMF825.keyoff(channel);
+  YMF825.keyon(channel, 0x43);
+  delay(x);
+  YMF825.keyoff(channel);
+  YMF825.keyoff(ch);
+  delay(8*x);
+  }
